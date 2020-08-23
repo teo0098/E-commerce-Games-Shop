@@ -1,0 +1,26 @@
+.AddEmployeePanel {
+    padding: 3vh 5vw;
+    text-align: center;
+}
+
+.AddEmployeePanel__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+    .AddEmployeePanel {
+        padding: 2vh 2vw;
+    }
+
+    .AddEmployeePanel__grid {
+        grid-template-columns: repeat(2, 48%);
+    }
+}
+
+@media (max-width: 800px) {
+    .AddEmployeePanel__grid {
+        grid-template-columns: repeat(1, 100%);
+    }
+}

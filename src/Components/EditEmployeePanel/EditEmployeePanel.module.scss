@@ -1,0 +1,29 @@
+.EditEmployeePanel__input {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.EditEmployeePanel__cont {
+    width: 100%;
+}
+
+.EditEmployeePanel__pass {
+    width: 30%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .EditEmployeePanel__input {
+        width: 50%;
+    }
+
+    .EditEmployeePanel__pass {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .EditEmployeePanel__input {
+        width: 100%;
+    }
+}

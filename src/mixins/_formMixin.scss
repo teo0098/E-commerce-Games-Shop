@@ -1,0 +1,8 @@
+@mixin form {
+    background-color: $navigationColor;
+    margin: 5vh;
+    width: 30%;
+    padding: 5vh 5vw;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px $navigationColor;
+}

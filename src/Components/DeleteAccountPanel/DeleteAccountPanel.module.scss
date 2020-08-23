@@ -1,0 +1,26 @@
+.DeleteAccountPanel {
+    padding: 3vh 5vw;
+    text-align: center;
+}
+
+.DeleteAccountPanel__div  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DeleteAccountPanel__pass {
+    width: 30%;
+}
+
+@media (max-width: 1100px) {
+    .DeleteAccountPanel__pass {
+        width: 40%;
+    }
+}
+
+@media (max-width: 800px) {
+    .DeleteAccountPanel__pass {
+        width: 100%;
+    }
+}

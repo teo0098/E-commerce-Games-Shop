@@ -1,0 +1,30 @@
+@import '../../../colors';
+@import '../../../mixins/iconsMixin';
+
+.SearchPanel {
+    margin-right: 1vw;
+    position: relative;
+    width: 3vw;
+}
+
+.SearchPanel__i {
+    @include icon();
+}
+
+.SearchPanel__i:hover {
+    color: $logoColor;
+}
+
+.SearchPanel__i--1, .SearchPanel__i--2 {
+    position: absolute;
+    transition: opacity 300ms;
+}
+
+.SearchPanel__i--2 {
+    font-size: 19px;
+}
+
+.SearchPanel__i--disabled {
+    opacity: 0;
+    z-index: -1;
+}

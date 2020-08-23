@@ -1,0 +1,56 @@
+@import '../../../colors';
+
+.Heading {
+    width: 80%;
+    margin: 3vh 0 5vh 0;
+}
+
+.Heading__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+    border-bottom: 0.5px solid $navigationColor;
+    padding: 1vh 1vw;
+}
+
+.Heading__nickname {
+    font-size: 22px !important;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.Heading__span {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.Heading__logout {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.Heading__icon {
+    margin-right: 0.5vw;
+}
+
+@media (max-width: 900px) {
+    .Heading {
+        width: 95%;
+    }
+}
+
+@media (max-width: 700px) {
+    .Heading__section {
+        flex-direction: column;
+    }
+
+    .Heading__span, .Heading__logout {
+        margin-bottom: 1vh;
+    }
+
+    .Heading__nickname {
+        margin-bottom: 3vh;
+    }
+}

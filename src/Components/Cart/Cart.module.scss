@@ -1,0 +1,184 @@
+@import '../../colors';
+@import '../../mixins/backgroundMixin.scss';
+
+.Cart {
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Cart__game {
+    display: flex;
+    align-items: center;
+    background-color: $logoColor;
+    border-radius: 3px;
+    padding: 2vh 2vw;
+    margin: 2vh 0;
+    width: 90%;
+    color: $navigationColor;
+    box-shadow: 0 0 10px 1px $navigationColor;
+}
+
+.Cart__image {
+    @include image();
+}
+
+.Cart__priceOption {
+    display: flex;
+    align-items: center;
+    margin: 0 2vw;
+}
+
+.Cart__price, .Cart__amount {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Cart__options {
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.Cart__trashBin {
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.Cart__link {
+    color: $navigationColor;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Game__actions {
+    display: flex;
+    align-items: center;
+}
+
+.Cart__total {
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.Cart__buyAll {
+    margin-right: 2vw;
+}
+
+.Cart__totalSpan, .Cart__totalPrice {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Cart__totalPrice {
+    margin-left: 2vw;
+}
+
+.Cart__totalSpan {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.Cart__totalContainer {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 0.5px solid $navigationColor;
+    border-radius: unset;
+    margin-bottom: 5vh;
+}
+
+@media (max-width: 1300px) {
+    .Cart__game {
+        width: 100%;
+    }
+
+    .Cart {
+        padding: 2vh 2vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Cart {
+        padding: 2vh 2vw;
+    }
+
+    .Cart__game {
+        flex-direction: column;
+    }
+
+    .Cart__options {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .Cart__priceOption, .Cart__options, .Cart__link, .Game__actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .Cart__link {
+        font-size: 20px;
+    }
+
+    .Cart__priceOption {
+        margin: 4vh 0;
+    }
+
+    .Cart__trashBin {
+        margin-left: 2vw;
+        font-size: 22px;
+    }
+
+    .Game__actions {
+        margin-top: 3vh;
+    }
+
+    .Cart__price {
+        font-size: 28px;
+    }
+
+    .Cart__amount {
+        margin: 0 2vw 0 2vw;
+    }
+
+    .Cart__image {
+        margin: 2vh 0;
+    }
+
+    .Cart__total {
+        margin: unset;
+        margin-top: 3vh;
+    }
+
+    .Cart__totalContainer {
+        margin: unset;
+        margin-bottom: 5vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .Cart__summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Cart__totalPrice {
+        margin: unset;
+    }
+
+    .Cart__total {
+        flex-direction: column;
+    }
+
+    .Cart__buyAll {
+        margin: unset;
+        margin-bottom: 2vh;
+    }
+}

@@ -1,0 +1,13 @@
+@mixin BG {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin image {
+    @include BG();
+    width: 160px;
+    height: 100px;
+    margin-right: 2vw;
+    border-radius: 3px;
+}

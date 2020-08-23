@@ -1,0 +1,58 @@
+@import '../../colors';
+@import '../../mixins/iconsMixin';
+
+.RespNavigation {
+    background-color: $navigationColor;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    display: none;
+    padding: 0;
+    height: 60px;
+}
+
+.RespNavigation__rightSide {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.RespNavigation__menuIcon {
+    color: $logoColor;
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 1vw;
+}
+
+.RespNavigation__i {
+    @include icon();
+}
+
+.RespNavigation__i--searchIcon {
+    margin-right: 2vw;
+}
+
+.RespNavigation__animation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding: 0 2vw;
+}
+
+.RespNavigation__menu {
+    background-color: $navigationColor;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+    z-index: 9000;
+}
+
+@media (max-width: 900px) {
+    .RespNavigation {
+        display: flex;
+    }
+}

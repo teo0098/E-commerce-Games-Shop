@@ -1,0 +1,53 @@
+@import '../../../colors';
+
+.Menu {
+    margin: 0 3vw;
+    display: flex;
+    transition: all 300ms;
+}
+
+.Menu__link {
+    text-decoration: none;
+    color: $linkColor;
+    margin: 0 1vw;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    padding: 1vh;
+}
+
+.Menu__link:hover {
+    color: $logoColor;
+}
+
+.Menu__i {
+    margin: 0 0.5vw;
+    font-size: 18px;
+}
+
+.Menu--disabled {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+}
+
+@media (max-width: 900px) {
+    .Menu {
+        flex-direction: column;
+        margin: 5vh 0;
+    }
+
+    .Menu__link {
+        padding: 4vh 2vw;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $logoColor;
+    }
+
+    .Menu__link:first-of-type {
+        border-top: 1px solid $logoColor;
+    }
+    
+    .Menu__i {
+        margin: 0 2vw;
+    }
+}

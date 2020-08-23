@@ -1,0 +1,8 @@
+@mixin icon {
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: $linkColor;
+    cursor: pointer;
+}

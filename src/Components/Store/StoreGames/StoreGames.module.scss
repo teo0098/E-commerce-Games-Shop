@@ -1,0 +1,103 @@
+@import '../../../mixins/backgroundMixin.scss';
+@import '../../../colors';
+
+.StoreGames {
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.StoreGames__link {
+    width: 100%;
+    text-decoration: none;
+    color: $navigationColor;
+    padding: 0 1vw;
+    border-radius: 3px;
+}
+
+.StoreGames__link:hover {
+    background-color: $logoColor;
+}
+
+.StoreGames__game {
+    border-bottom: 0.5px solid $navigationColor;
+    display: flex;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+.StoreGames__gameName {
+    font-size: 19px;
+}
+
+.StoreGames__image {
+    @include image();
+}
+
+.StoreGames__options {
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.StoreGames__span {
+    margin: 0 2vw;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.StoreGames__info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.StoreGames__date {
+    font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+    .StoreGames {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .StoreGames {
+        width: 100%;
+    }
+
+    .StoreGames__gameName {
+        font-size: 25px;
+    }
+
+    .StoreGames__date {
+        font-size: 20px;
+    }
+
+    .StoreGames__span {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .StoreGames__game {
+        flex-direction: column;
+    }
+
+    .StoreGames__options {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .StoreGames__info {
+        margin: 2vh 0;
+        text-align: center;
+    }
+
+    .StoreGames__span {
+        margin-bottom: 3vh;
+    }
+}

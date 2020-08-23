@@ -1,0 +1,77 @@
+@import '../../../colors';
+
+.OrderOptions {
+    width: 60%;
+    background-color: $logoColor;
+    padding: 0 2vw;
+    color: $navigationColor;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 1px $navigationColor;
+}
+
+.OrderOptions__inputs {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    row-gap: 2vh;
+}
+
+.OrderOptions__radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.OrderOptions__section {
+    margin: 5vh 0;
+}
+
+.OrderOptions__span {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 2vh;
+}
+
+.OrderOptions__inputsMove {
+    margin-top: 2vh;
+}
+
+.OrderOptions__pay {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.OrderOptions__icon {
+    margin-right: 0.5vw;
+}
+
+@media (max-width: 900px) {
+    .OrderOptions__inputs {
+        grid-template-columns: 100%;
+    }
+
+    .OrderOptions {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .OrderOptions {
+        width: 95%;
+    }
+
+    .OrderOptions__pay {
+        justify-content: center;
+    }
+
+    .OrderOptions__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .OrderOptions__section {
+        width: 100%;
+    }
+}

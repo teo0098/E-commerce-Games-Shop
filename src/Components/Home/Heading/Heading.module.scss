@@ -1,0 +1,24 @@
+@import '../../../colors';
+
+.Heading{
+    border-bottom: 0.5px solid $navigationColor;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 2vh 0;
+    color: $navigationColor;
+}
+
+.Heading__h3 {
+    margin: 0 1vw;
+}
+
+.Heading__i {
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .Heading {
+        width: 95%;
+    }
+}

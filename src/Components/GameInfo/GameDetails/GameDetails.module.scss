@@ -1,0 +1,54 @@
+@import '../../../colors';
+
+.GameDetails {
+    display: flex;
+    margin: 5vh auto 5vh auto;
+    width: 80%;
+    justify-content: space-between;
+    color: $navigationColor;
+}
+
+.GameDetails__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid $navigationColor;
+    margin-bottom: 2vh;
+}
+
+.GameDetails__desc {
+    width: 50%;
+}
+
+.GameDetails__details {
+    width: 40%;
+}
+
+.GameDetails__p {
+    line-height: 1.7;
+}
+
+.GameDetails__detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+.GameDetails__h3 {
+    margin-left: 0.5vw;
+}
+
+@media (max-width: 1000px) {
+    .GameDetails {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .GameDetails__desc, .GameDetails__details {
+        width: 100%;
+    }
+
+    .GameDetails__details {
+        margin-top: 5vh;
+    }
+}

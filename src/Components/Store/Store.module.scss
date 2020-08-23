@@ -1,0 +1,20 @@
+.Store {
+    width: 80%;
+    margin: 3vh auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1400px) {
+    .Store {
+        width: 100%;
+        padding: 0 2vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Store {
+        margin: 1vh auto;
+        flex-direction: column;
+    }
+}

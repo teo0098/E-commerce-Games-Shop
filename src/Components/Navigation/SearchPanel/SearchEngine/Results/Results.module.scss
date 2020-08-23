@@ -1,0 +1,104 @@
+@import '../../../../../colors';
+@import '../../../../../mixins/backgroundMixin.scss';
+
+.Results {
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $linkColor;
+    width: 30vw;
+    color: $logoColor;
+    padding: 0.5vh;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.Results__link {
+    text-decoration: none;
+    color: $navigationColor;
+    display: block;
+}
+
+.Results__link:hover {
+    background-color: $linkColor;
+}
+
+.Results__outcome {
+    position: absolute;
+    top: 50px;
+    background-color: $logoColor;
+    text-align: center;
+    width: 50vw;
+    box-shadow: 0 0 10px 1px $navigationColor;
+    max-height: 60vh;
+    overflow: auto;
+    left: -20%;
+    z-index: 1000;
+}
+
+.Results__outcome::-webkit-scrollbar {
+    width: 10px;
+}
+  
+.Results__outcome::-webkit-scrollbar-track {
+    background: $linkColor; 
+}
+   
+.Results__outcome::-webkit-scrollbar-thumb {
+    background: $scrollBar1; 
+}
+  
+.Results__outcome::-webkit-scrollbar-thumb:hover {
+    background: $scrollBar2; 
+}
+
+.Results__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2vw;
+    border-bottom: 0.5px solid $navigationColor;
+}
+
+.Results__div {
+    display: flex;
+    align-items: center;
+}
+
+.Results__image {
+    @include image();
+    height: 60px;
+    width: 100px;
+}
+
+.Results__gamePrice {
+    margin-left: 2vw;
+    font-weight: bold;
+    border: 0.5px solid $navigationColor;
+    box-shadow: 0 0 4px 1px $navigationColor;
+    padding: 5px 1vw;
+    border-radius: 3px;
+}
+
+.Results__gameName {
+    text-align: left;
+}
+
+@media (max-width: 1200px) {
+    .Results__outcome {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .Results {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .Results__image {
+        display: none;
+    }
+}

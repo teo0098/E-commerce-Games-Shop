@@ -1,0 +1,72 @@
+@import '../../mixins/backgroundMixin.scss';
+@import '../../colors';
+
+@mixin sectionPrice {
+    background-color: $logoColor;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px $navigationColor;
+}
+
+.GameInfo {
+    height: calc(100vh - 70px);
+    @include BG();
+    display: flex;
+    align-items: flex-end;
+    background-attachment: fixed;
+}
+
+.GameInfo__header {
+    width: 100%;
+    background-color: $navigationColor;
+    color: $linkColor;
+    padding: 5vh 2vw;
+    position: relative;
+}
+
+.GameInfo__gameName {
+    letter-spacing: 2px;
+    width: 50%;
+}
+
+.GameInfo__section {
+    position: absolute;
+    right: 10%;
+    bottom: 45%;
+    display: flex;
+    padding: 2vh 1vw;
+    @include sectionPrice();
+}
+
+.GameInfo__sectionResp {
+    width: 90%;
+    display: none;
+    margin: 5vh auto 5vh auto;
+    padding: 1vh 0.5vw;
+    @include sectionPrice();
+}
+
+@media (max-width: 900px) {
+    .GameInfo {
+        height: calc(100vh - 50px);
+    }
+
+    .GameInfo__section {
+        display: none;
+    }
+
+    .GameInfo__sectionResp {
+        display: flex;
+    }
+
+    .GameInfo__gameName {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .GameInfo__gameName {
+        font-size: 24px;
+    }
+}

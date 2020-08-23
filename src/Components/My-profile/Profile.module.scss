@@ -1,0 +1,30 @@
+@import '../../colors';
+
+.Profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Profile__options {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-auto-rows: minmax(200px, auto);
+    justify-content: space-between;
+    gap: 5vh 0;
+    margin-bottom: 3vh;
+}
+
+@media (max-width: 1200px) {
+    .Profile__options {
+        grid-template-columns: repeat(2, 45%);
+    }
+}
+
+@media (max-width: 900px) {
+    .Profile__options {
+        width: 95%;
+        grid-template-columns: repeat(1, 100%);
+    }
+}

@@ -1,0 +1,72 @@
+@import '../centerHomeContentMixin.scss';
+@import '../../../mixins/backgroundMixin.scss';
+@import '../../../colors';
+
+.CheapGames {
+    @include centerHomeContent();
+    margin-top: 5vh;
+}
+
+.CheapGames__games {
+    width: 80%;
+}
+
+.CheapGames__section {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 2vw;
+    background-color: $logoColor;
+    margin: 4vh 0;
+    box-shadow: 0 0 10px 1px $navigationColor;
+    border-radius: 3px;
+}
+
+.CheapGames__image {
+    @include image();
+}
+
+.CheapGames__div {
+    display: flex;
+    align-items: center;
+}
+
+.CheapGames__span {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 1vh 2vw;
+    color: $navigationColor;
+}
+
+.CheapGames__link {
+    color: $navigationColor;
+    font-size: 17px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .CheapGames__games {
+        width: 95%;
+    }
+
+    .CheapGames__section {
+        flex-direction: column;
+    }
+
+    .CheapGames__div {
+        flex-direction: column;
+    }
+
+    .CheapGames__link {
+        margin: 2vh 0;
+        font-size: 20px;
+    }
+
+    .CheapGames__span {
+        font-size: 28px;
+        margin-bottom: 4vh;
+    }
+
+    .CheapGames__i {
+        font-size: 22px;
+    }
+}

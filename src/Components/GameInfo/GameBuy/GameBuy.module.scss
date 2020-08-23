@@ -1,0 +1,29 @@
+@import '../../../colors';
+
+.GameBuy__price {
+    color: $navigationColor;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.GameBuy__amount {
+    display: flex;
+    margin-bottom: 3vh;
+    justify-content: space-around;
+}
+
+.GameBuy__span {
+    color: $navigationColor;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.GameBuy__cartPlus {
+    margin-right: 1vw;
+}
+
+@media (max-width: 800px) {
+    .GameBuy__price {
+        font-size: 30px;
+    }
+}

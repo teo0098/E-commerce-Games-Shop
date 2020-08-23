@@ -1,0 +1,21 @@
+@import '../../../colors';
+@import '../../../mixins/iconsMixin';
+
+.SearchEngine {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.SearchEngine__i {
+    @include icon();
+}
+
+.SearchEngine__i--RespClose {
+    font-size: 19px;
+    margin-left: 2vw;
+}
+
+.SearchEngine__i--search {
+    margin-right: 2vw;
+}

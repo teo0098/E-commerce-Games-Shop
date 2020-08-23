@@ -1,0 +1,17 @@
+@import '../../../colors';
+
+.Logo {
+    text-decoration: none;
+    padding: 1vh 0;
+}
+
+.Logo__i {
+    color: $logoColor;
+    font-size: 44px;
+}
+
+@media (max-width: 900px) {
+    .Logo {
+        padding: 0 1vw;
+    }
+}

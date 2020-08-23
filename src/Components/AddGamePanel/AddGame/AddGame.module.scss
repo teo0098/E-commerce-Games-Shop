@@ -1,0 +1,108 @@
+@import '../../../colors';
+
+.AddGame {
+    color: $navigationColor;
+    width: 80%;
+    margin: 5vh auto;
+}
+
+.AddGame__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.AddGame__picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $logoColor;
+    border-radius: 3px;
+    padding: 3vh 2vw;
+    box-shadow: 0 0 10px 1px $navigationColor;
+    margin-bottom: 5vh;
+}
+
+.AddGame__span {
+    text-align: center;
+    display: block;
+    margin: 1vh 0;
+}
+
+.AddGame__camera {
+    font-size: 50px;
+    margin-bottom: 2vh;
+}
+
+.AddGame__text {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-between;
+}
+
+.AddGame__descGame {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+.AddGame__desc {
+    resize: none;
+    height: 200px;
+    outline: none;
+    padding: 1vh 1vw;
+    border-radius: 3px;
+    background-color: $logoColor;
+    color: $navigationColor;
+    line-height: 1.5;
+}
+
+.AddGame__category {
+    margin-top: 4vh;
+}
+
+.AddGame__label {
+    display: block;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+}
+
+.AddGame__categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+}
+
+.AddGame__uploading {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AddGame__upload {
+    display: block;
+    border-radius: 3px;
+    margin-top: 1vh;
+    padding: 1vh 1vw;
+}
+
+.AddGame__file {
+    margin: 2vh 0;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .AddGame {
+        width: 95%;
+    }
+}
+
+@media (max-width: 900px) {
+    .AddGame__text {
+        grid-template-columns: 100%;
+    }
+
+    .AddGame__categories {
+        flex-direction: column;
+    }
+}

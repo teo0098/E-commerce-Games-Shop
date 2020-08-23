@@ -1,0 +1,88 @@
+@import '../../../colors';
+@import '../../../mixins/backgroundMixin.scss';
+
+@mixin commonStyles {
+    background-color: $logoColor;
+    box-shadow: 0 0 10px 1px $navigationColor;
+    color: $navigationColor;
+    border-radius: 3px;
+}
+
+.OrderSummary {
+    width: 35%;
+}
+
+.OrderSummary__container {
+    @include commonStyles();
+    margin-top: 3vh;
+}
+
+.OrderSummary__image {
+    width: 100%;
+    height: 300px;
+    border-radius: 3px 3px 0 0;
+    @include BG();
+}
+
+.OrderSummary__detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid $navigationColor;
+    padding: 2vh 1vw;
+}
+
+.OrderSummary__gameName {
+    margin-left: 1vw;
+}
+
+.OrderSummary__value {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.OrderSummary__overview {
+    margin-bottom: 5vh;
+    position: sticky;
+    top: 70px;
+    padding: 0 1vw 2vh 1vw;
+    @include commonStyles();
+}
+
+@media (max-width: 1000px) {
+    .OrderSummary {
+        margin: unset;
+        margin-bottom: 5vh;
+        width: 60%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .OrderSummary__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .OrderSummary__overview {
+        position: relative;
+        top: 0;
+        margin: unset;
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width: 900px) {
+    .OrderSummary {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .OrderSummary {
+        width: 95%;
+    }
+
+    .OrderSummary__image {
+        height: 250px;
+    }
+}

@@ -1,0 +1,53 @@
+@import '../../../colors';
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin colors {
+    background-color: $navigationColor;
+    color: $logoColor;
+}
+
+.StoreCategories {
+    width: 20%;
+    @include flex();
+    padding: 0.5vh 0;
+}
+
+.StoreCategories__categories {
+    @include flex();
+    border-bottom: 0.5px solid $navigationColor;
+    padding: 1vh 0;
+}
+
+.StoreCategories__link {
+    text-decoration: none;
+    color: $navigationColor;
+    padding: 0.5vh 1vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    margin: 0.5vh 0;
+}
+
+.StoreCategories__link:hover {
+    @include colors();
+}
+
+.StoreCategories__link--active {
+    @include colors();
+}
+
+@media (max-width: 1000px) {
+    .StoreCategories {
+        width: 100%;
+        padding: 0 1vw;
+    }
+
+    .StoreCategories__link {
+        padding: 1vh 1vw;
+        font-size: 20px;
+    }
+}

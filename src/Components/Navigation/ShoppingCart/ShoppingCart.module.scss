@@ -1,0 +1,29 @@
+@import '../../../colors';
+
+.ShopBasket {
+    color: $linkColor;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+    font-size: 18px;
+    position: relative;
+}
+
+.ShopBasket:hover {
+    color: $logoColor;
+}
+
+.ShopBasket__span {
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    left: 90%;
+    bottom: 70%;
+}
+
+@media (max-width: 900px) {
+    .ShopBasket {
+        margin-left: 1vw;
+    }
+}

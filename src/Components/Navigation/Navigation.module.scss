@@ -1,0 +1,31 @@
+@import '../../colors';
+
+.Navigation {
+    width: 100%;
+    background-color: $navigationColor;
+    display: flex;
+    height: 70px;
+    padding: 0 20vw;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.Navigation__rightSide {
+    display: flex;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+    .Navigation {
+        padding: 0 15vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .Navigation {
+        display: none;
+    }
+}

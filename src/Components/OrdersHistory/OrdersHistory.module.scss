@@ -1,0 +1,12 @@
+@import '../../colors';
+
+.OrdersHistory {
+    width: 95%;
+    margin: 5vh auto;
+    color: $navigationColor;
+    text-align: center;
+}
+
+.OrdersHistory__gamesName {
+    display: flex;
+}

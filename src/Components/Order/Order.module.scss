@@ -1,0 +1,20 @@
+.Order {
+    display: flex;
+    margin: 4vh auto;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media (max-width: 1200px) {
+    .Order {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Order {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}

@@ -1,0 +1,105 @@
+@import '../../../colors';
+@import '../../../mixins/backgroundMixin.scss';
+@import '../centerHomeContentMixin.scss';
+
+.Slider {
+    @include centerHomeContent();
+}
+
+.Slider__animation {
+    width: 80%;
+    margin: 2vh 0;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.Slider__slide {
+    height: 70vh;
+    border-radius: 6px;
+    position: relative;
+}
+
+.Slider__slideChild {
+    height: inherit;
+    @include BG();
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.Slider__section {
+    background-color: $navigationColor;
+    color: $logoColor;
+    display: flex;
+    padding: 5vh 2vw;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Slider__sectionRight {
+    display: flex;
+    align-items: center;
+}
+
+.Slider__gameName {
+    letter-spacing: 1px;
+}
+
+.Slider__price {
+    margin-right: 2vw;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Slider__go {
+    position: absolute;
+    font-size: 32px;
+    top: 40%;
+    left: 2%;
+    color: $logoColor;
+    background-color: $navigationColor;
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Slider__next {
+    left: auto;
+    right: 2%;
+}
+
+.Slider__link {
+    text-decoration: none;
+    background-color: $materialBlueColor1;
+    color: $logoColor;
+    padding: 2vh 1vw;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    font-size: 17px;
+}
+
+.Slider__link:hover {
+    background-color: $materialBlueColor2;
+}
+
+@media (max-width: 900px) {
+    .Slider__animation {
+        width: 95%;
+    }
+
+    .Slider__section {
+        padding: 1vh 1vw;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Slider__sectionRight {
+        margin-top: 2vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .Slider__section {
+        font-size: 14px;
+    }
+}

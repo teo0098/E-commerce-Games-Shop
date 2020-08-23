@@ -1,0 +1,20 @@
+.EditCustomerPanel {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+}
+.EditCustomerPanel__cont {
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .EditCustomerPanel {
+        grid-template-columns: repeat(2, 48%);
+    }
+}
+
+@media (max-width: 800px) {
+    .EditCustomerPanel {
+        grid-template-columns: 100%;
+    }
+}
