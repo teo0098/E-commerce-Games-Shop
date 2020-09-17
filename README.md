@@ -4,7 +4,7 @@ are also features like browsing all game in the store or searching specific game
 <p>Technologies used:</p>
 <ul>
   <li>HTML 5</li>
-  <li>SCSS</li>
+  <li>SCSS modules</li>
   <li>React</li>
   <li>Redux</li>
   <li>Redux persist</li>
@@ -15,6 +15,8 @@ are also features like browsing all game in the store or searching specific game
   <li>Axios</li>
   <li>Bcrypt</li>
   <li>Recaptcha</li>
+  <li>Material UI</li>
+  <li>React hook form</li>
 </ul>
 <hr>
 <a href="https://teo-games-shop.herokuapp.com/">Project's preview</a>
