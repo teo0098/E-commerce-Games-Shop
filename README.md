@@ -13,7 +13,7 @@ are also features like browsing all game in the store or searching specific game
   <li>PHP</li>
   <li>OAuth (JWT)</li>
   <li>Axios</li>
-  <li>Bcrypt</li>
+  <li>React Spring</li>
   <li>Recaptcha</li>
   <li>Material UI</li>
   <li>React hook form</li>
