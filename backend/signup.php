@@ -1,4 +1,5 @@
 <?php
+    require_once "./vendor/autoload.php";
     include "CORS.php";
     include "dbCredentials.php";
     include "dbConnection.php";
@@ -58,13 +59,22 @@
                     }
                     else {
                         if ($table != "employees") {
-                            $to = $email;
-                            $subject = "Games Shop registration verification";
-                            $message = "<a style='text-align: center; padding: 20px; font-weight: bold;' href='https://teo-games-shop.herokuapp.com/verification?vkey=$vkey'>I confirm my registration on Games Shop website</a>";
-                            $headers = "MIME-Version: 1.0" . "\r\n";
-                            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                            $headers .= "From: Games Shop <$authEmail>" . "\r\n";
-                            mail($to, $subject, $message, $headers);
+                            $sendgridEmail = new \SendGrid\Mail\Mail(); 
+                            $sendgridEmail->setFrom("$authEmail", "Games Shop");
+                            $sendgridEmail->setSubject("Games Shop registration verification");
+                            $sendgridEmail->addTo($email);
+                            $sendgridEmail->addContent(
+                                "text/html", "<a style='text-align: center; padding: 20px; font-weight: bold;' href='https://teo-games-shop.herokuapp.com/verification?vkey=$vkey'>I confirm my registration on Games Shop website</a>"
+                            );
+                            $sendgrid = new \SendGrid($GAMES_SHOP_SENDGRID_KEY);
+                            try {
+                                $response = $sendgrid->send($sendgridEmail);
+                                if ($response->statusCode() != 202) {
+                                    echo json_encode("ERROR");
+                                }
+                            } catch (Exception $e) {
+                                echo json_encode("ERROR");
+                            }
                         }
                     }
                 }
